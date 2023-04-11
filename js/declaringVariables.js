@@ -8,5 +8,8 @@ myNum = myVar;
 var a;
 a = 7;
 var b;
+//Hazel Tiffany Taylo
+b = a;
+console.log(b);
 
 // console.log(myNum);
