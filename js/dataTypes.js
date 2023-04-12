@@ -1,7 +1,7 @@
-let a;
-let b = 8;
-let c = true;
-let d = 'Hello World';
-let e;
+let a; //undefined
+let b = 8; //number
+let c = true; //boolean
+let d = 'Hello World'; //string
+let e; //undefined
 
 console.log('10');
