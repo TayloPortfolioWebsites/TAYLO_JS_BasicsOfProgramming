@@ -50,3 +50,33 @@
 document.querySelector('#callback__btn').addEventListener("click", function(){
     console.log('This is a callback that got displayed using an event listener when a user clicks a button.');
 });
+
+/**************************************************** */
+
+// CALLBACK EXAMPLE 
+
+const userStopsWatching = false;
+const userCurrentlyWatching = true;
+
+function callBackTutorial(callB, errorCallB){
+    if(userStopsWatching){
+        errorCallB({
+            name: 'The user has stopped watching',
+            message: 'Bye, see you soon again!'
+        });
+    }
+    else if(userCurrentlyWatching){
+        errorCallB({
+            name: 'The user is currently watching',
+            message: 'I hope you learned something from this lesson tutorial.'
+        });
+    }
+    else{
+        callB("You're doing great! Remember that a little progress each day adds up to big results!");
+    }
+}
+
+callBackTutorial(
+    (message)=>{console.log('This is a SUCCESSFULL CALLBACK: ' + message)},
+    (error)=>{console.log(error.name + ' ' + error.message)
+});
